@@ -285,13 +285,25 @@ a:hover{text-decoration:underline}
 .footer-nav a:hover{color:var(--accent)}
 .disclaimer{margin:.85rem 0 0;font-size:.82rem;color:#6f6f78;max-width:70ch}
 
-/* Mobile nav */
+/* Mobile nav + readability */
 @media(max-width:720px){
-  .nav-toggle{display:inline-flex}
+  .nav-toggle{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:44px;min-height:44px;padding:.55rem .85rem;font-size:.95rem;
+  }
   .nav{
     display:none;width:100%;flex-direction:column;
-    padding-bottom:.75rem;
+    padding-bottom:.75rem;gap:.15rem;
   }
   .nav.is-open{display:flex}
+  .nav a{
+    display:flex;align-items:center;min-height:44px;
+    padding:.7rem .75rem;font-size:1rem;
+  }
   .header-inner{flex-wrap:wrap}
+  body{font-size:16px}
+  .event-note,.event-meta,.event-links a{font-size:1rem !important}
+  .hero-kicker{font-size:.9rem}
+  .btn{min-height:44px}
+  .footer-nav a{display:inline-flex;align-items:center;min-height:44px}
 }
